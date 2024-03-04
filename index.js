@@ -109,7 +109,7 @@ async function init() {
 
         // Enable uuid-ossp extension
         await client.query('CREATE EXTENSION IF NOT EXISTS "uuid-ossp"');
-
+        // "CASCADE" will automatically drop any dependent objects, such as foreign key constraints, along with the table.
         let SQL = `
         DROP TABLE IF EXISTS departments CASCADE;
         DROP TABLE IF EXISTS employees CASCADE;
