@@ -44,7 +44,7 @@ app.get("/api/employees", async (req, res, next) => {
         next(error);
     }
 });
-
+// Creating a new employeee
 app.post("/api/employees", async (req, res, next) => {
     try {
         const SQL = `
@@ -65,7 +65,7 @@ app.post("/api/employees", async (req, res, next) => {
         next(error);
     }
 });
-
+// Update an employee
 app.put("/api/employees/:id", async (req, res, next) => {
     try {
         const SQL = `
@@ -86,7 +86,7 @@ app.put("/api/employees/:id", async (req, res, next) => {
         next(error);
     }
 });
-
+// Delete an employee
 app.delete("/api/employees/:id", async (req, res, next) => {
     try {
         const SQL = `
